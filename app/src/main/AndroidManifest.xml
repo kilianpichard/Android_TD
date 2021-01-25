@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TD1">
+        <activity android:name=".AjoutMagasin"></activity>
         <activity
             android:name=".ListeMagasins"
             android:label="@string/title_activity_liste_magasins"
-            android:theme="@style/Theme.TD1.NoActionBar"></activity>
+            android:theme="@style/Theme.TD1.NoActionBar" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name">
