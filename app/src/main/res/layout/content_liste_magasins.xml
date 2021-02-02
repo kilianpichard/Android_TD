@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
-
+<!-- LJ: Pas d'ID pour la liste ? -> le code Java ne peut pas travailler avec elle ! -->
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"

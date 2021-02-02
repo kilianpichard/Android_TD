@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".AjoutMagasin">
 
+    <!-- LJ : Les marges sont grosses, mais l'affichage est cohérent sur tous mes écrans ; très bien ! -->
     <EditText
         android:id="@+id/editTextTextPersonName"
         android:layout_width="wrap_content"
