@@ -1,5 +1,6 @@
 package com.example.td1;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -28,7 +29,7 @@ public class AjoutMagasin extends AppCompatActivity {
     TextView text = (TextView) findViewById(R.id.textView);
     Button send = (Button) findViewById(R.id.send);
     final Intent intentP = getIntent();
-
+    final Intent retour = new Intent(AjoutMagasin.this, ListeMagasins.class);
     if(intentP.getStringExtra("text") != null && intentP.getStringExtra("nomMagasin") !=null){
       text.setText(intentP.getStringExtra("text"));
       champ.setText(intentP.getStringExtra("nomMagasin"));
@@ -38,9 +39,8 @@ public class AjoutMagasin extends AppCompatActivity {
       @Override
       public void onClick(View view) {
         if (champ.getText().toString().length() != 0) {
-          Intent retour = new Intent();
           retour.putExtra("nomMagasin", champ.getText().toString());
-          setResult(1, retour);
+          setResult(MainActivity.RESULT_OK, retour);
           finish();
         }
       }
