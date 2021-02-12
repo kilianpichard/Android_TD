@@ -20,6 +20,7 @@ public class ListeMagasins extends AppCompatActivity {
         setContentView(R.layout.activity_liste_magasins);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
     }
 
