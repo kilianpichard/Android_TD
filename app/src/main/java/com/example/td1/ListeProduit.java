@@ -52,8 +52,8 @@ public class ListeProduit extends AppCompatActivity {
         TextView productPlace = v.findViewById(R.id.productPlace);
         productName.setText(produits.get(position).nom);
         productCat.setText(produits.get(position).categorie);
-        productPrice.setText(String.format("%.2f",produits.get(position).prix));
-        //productReduc.setText(produits.get(position).promotion);
+        productPrice.setText(String.format("%.2f",produits.get(position).prix*(1-produits.get(position).promotion*0.01))+"€");
+        productReduc.setText(String.valueOf(produits.get(position).promotion)+"%");
         productPlace.setText(produits.get(position).emplacement);
 
         if(produits.get(position).promotion==0){
