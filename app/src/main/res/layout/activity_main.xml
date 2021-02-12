@@ -1,44 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/produits"
-        android:layout_width="227dp"
-        android:layout_height="79dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="100dp"
-        android:text="Liste des Produits"
-        app:layout_constraintBottom_toTopOf="@+id/listes"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.499"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/magasins" />
+  <Button
+    android:id="@+id/produits"
+    android:layout_width="227dp"
+    android:layout_height="79dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="100dp"
+    android:text="Liste des Produits"
+    app:layout_constraintBottom_toTopOf="@+id/listes"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.499"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/magasins" />
 
-    <Button
-        android:id="@+id/magasins"
-        android:layout_width="227dp"
-        android:layout_height="79dp"
-        android:layout_marginTop="16dp"
-        android:onClick="onClickMagasins"
-        android:text="Liste des Magasins"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+  <Button
+    android:id="@+id/magasins"
+    android:layout_width="227dp"
+    android:layout_height="79dp"
+    android:layout_marginTop="16dp"
+    android:onClick="onClickMagasins"
+    android:text="Liste des Magasins"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/listes"
-        android:layout_width="227dp"
-        android:layout_height="79dp"
-        android:layout_marginTop="20dp"
-        android:background="#EFDEDE"
-        android:text="Liste des Listes"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/produits" />
+  <Button
+    android:id="@+id/listes"
+    android:layout_width="227dp"
+    android:layout_height="79dp"
+    android:layout_marginTop="20dp"
+    android:background="#EFDEDE"
+    android:text="Liste des Listes"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/produits" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
