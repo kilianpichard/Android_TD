@@ -20,22 +20,23 @@ public class ListeMagasins extends AppCompatActivity {
     Toolbar toolbar = findViewById(R.id.toolbar);
     setSupportActionBar(toolbar);
     getSupportActionBar().setDisplayHomeAsUpEnabled(true); // Boutton de retour vers l'activité parente
-  }
 
-  public void onClickModify(View view){
     final Intent intent = new Intent(ListeMagasins.this, AjoutMagasin.class);
     final ListView listeMagasins =(ListView)findViewById(R.id.listMagasins);
     listeMagasins.setOnItemClickListener((parent, view1, position, id) -> {
       intent.putExtra("nomMagasin",listeMagasins.getItemAtPosition(position).toString());
       intent.putExtra("text","Changer "+listeMagasins.getItemAtPosition(position).toString()+" en :");
       startActivityForResult(intent,2);
-      onActivityResult(1,1,intent);
+      onActivityResult(2,1,intent);
     });
   }
+
   public void onClickAjout(View view) {
     Intent ajoutActivity = new Intent(this, AjoutMagasin.class);
+    ajoutActivity.putExtra("nomMagasin","");
+    ajoutActivity.putExtra("text","Ajouter un Magasin");
     startActivityForResult(ajoutActivity, 1);
-    onActivityResult(1, 1, ajoutActivity); //Request code de 1 pour créer, 2 pour modifier
+    onActivityResult(1, 1, ajoutActivity);
   }
 
   @Override
