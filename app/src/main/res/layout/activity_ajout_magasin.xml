@@ -8,7 +8,7 @@
 
     <!-- LJ : Les marges sont grosses, mais l'affichage est cohérent sur tous mes écrans ; très bien ! -->
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/editMagasin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -28,13 +28,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+  <Button
+    android:id="@+id/send"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="40dp"
+    android:onClick="addMagasin"
+    android:text="Ajouter"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/editMagasin" />
 </androidx.constraintlayout.widget.ConstraintLayout>
