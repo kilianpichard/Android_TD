@@ -17,4 +17,8 @@ public class MainActivity extends AppCompatActivity {
   public void onClickMagasins(View view) {
     startActivity(new Intent(this, ListeMagasins.class));
   }
+
+  public void onClickProduit(View view) {
+    startActivity(new Intent(this, ListeProduit.class));
+  }
 }
