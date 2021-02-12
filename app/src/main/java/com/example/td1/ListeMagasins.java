@@ -26,8 +26,6 @@ public class ListeMagasins extends AppCompatActivity {
     listeMagasins.setOnItemClickListener((parent, view1, position, id) -> {
       intent.putExtra("nomMagasin",listeMagasins.getItemAtPosition(position).toString());
       intent.putExtra("text","Changer "+listeMagasins.getItemAtPosition(position).toString()+" en :");
-      startActivityForResult(intent,2);
-      onActivityResult(2,1,intent);
     });
   }
 
