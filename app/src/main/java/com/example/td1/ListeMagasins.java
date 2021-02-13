@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -22,10 +21,10 @@ public class ListeMagasins extends AppCompatActivity {
     getSupportActionBar().setDisplayHomeAsUpEnabled(true); // Boutton de retour vers l'activité parente
 
     final Intent intent = new Intent(ListeMagasins.this, AjoutMagasin.class);
-    final ListView listeMagasins =(ListView)findViewById(R.id.listMagasins);
+    final ListView listeMagasins = (ListView) findViewById(R.id.listMagasins);
     listeMagasins.setOnItemClickListener((parent, view1, position, id) -> {
-      intent.putExtra("nomMagasin",listeMagasins.getItemAtPosition(position).toString());
-      intent.putExtra("text","Changer "+listeMagasins.getItemAtPosition(position).toString()+" en :");
+      intent.putExtra("nomMagasin", listeMagasins.getItemAtPosition(position).toString());
+      intent.putExtra("text", "Changer " + listeMagasins.getItemAtPosition(position).toString() + " en :");
       startActivityForResult(intent, 1);
       onActivityResult(2, 1, intent);
     });
@@ -33,8 +32,8 @@ public class ListeMagasins extends AppCompatActivity {
 
   public void onClickAjout(View view) {
     Intent ajoutActivity = new Intent(this, AjoutMagasin.class);
-    ajoutActivity.putExtra("nomMagasin","");
-    ajoutActivity.putExtra("text","Ajouter un Magasin");
+    ajoutActivity.putExtra("nomMagasin", "");
+    ajoutActivity.putExtra("text", "Ajouter un Magasin");
     startActivityForResult(ajoutActivity, 1);
     onActivityResult(1, 1, ajoutActivity);
   }

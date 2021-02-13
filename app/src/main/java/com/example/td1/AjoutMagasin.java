@@ -1,6 +1,5 @@
 package com.example.td1;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -11,10 +10,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import org.w3c.dom.Text;
-
 public class AjoutMagasin extends AppCompatActivity {
-
 
 
   @Override
@@ -30,12 +26,12 @@ public class AjoutMagasin extends AppCompatActivity {
     Button send = (Button) findViewById(R.id.send);
     final Intent intentP = getIntent();
     final Intent retour = new Intent(AjoutMagasin.this, ListeMagasins.class);
-    if(intentP.getStringExtra("text") != null && intentP.getStringExtra("nomMagasin") !=null){
+    if (intentP.getStringExtra("text") != null && intentP.getStringExtra("nomMagasin") != null) {
       text.setText(intentP.getStringExtra("text"));
       champ.setText(intentP.getStringExtra("nomMagasin"));
     }
 
-    send.setOnClickListener(new View.OnClickListener(){
+    send.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
         if (champ.getText().toString().length() != 0) {

@@ -7,7 +7,7 @@ public class Produit {
   public int promotion; // en %
   public String emplacement;
 
-  public Produit(String categorie, String nom, double prix, int promotion, String emplacement){
+  public Produit(String categorie, String nom, double prix, int promotion, String emplacement) {
     this.categorie = categorie;
     this.nom = nom;
     this.prix = prix;

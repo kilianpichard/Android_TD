@@ -11,9 +11,9 @@
     android:theme="@style/Theme.TD1">
     <activity
       android:name=".AjoutMagasin"
+      android:label="@string/title_activity_ajout_magasins"
       android:parentActivityName=".ListeMagasins"
-      android:theme="@style/Theme.TD1.NoActionBar"
-      android:label="@string/title_activity_ajout_magasins"></activity>
+      android:theme="@style/Theme.TD1.NoActionBar"></activity>
     <activity
       android:name=".ListeMagasins"
       android:label="@string/title_activity_liste_magasins"
