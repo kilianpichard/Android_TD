@@ -10,28 +10,31 @@
     android:supportsRtl="true"
     android:theme="@style/Theme.TD1">
     <activity
-      android:name=".AjoutMagasin"
-      android:label="@string/title_activity_ajout_magasins"
-      android:parentActivityName=".ListeMagasins"
-      android:theme="@style/Theme.TD1.NoActionBar"></activity>
-    <activity
-      android:name=".ListeMagasins"
-      android:label="@string/title_activity_liste_magasins"
-      android:parentActivityName=".MainActivity"
-      android:theme="@style/Theme.TD1.NoActionBar" />
-    <activity
-      android:name=".ListeProduit"
-      android:label="@string/title_activity_liste_produits"
-      android:parentActivityName=".MainActivity"
-      android:theme="@style/Theme.TD1.NoActionBar" />
-    <activity
       android:name=".MainActivity"
-      android:label="@string/main_title">
+      android:label="@string/title_activity_main"
+      android:theme="@style/Theme.TD1.NoActionBar">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
+
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
+    <activity
+      android:name=".AjoutMagasin"
+      android:label="@string/title_activity_ajout_magasins"
+      android:parentActivityName=".ListeMagasins"
+      android:theme="@style/Theme.TD1.NoActionBar" />
+    <activity
+      android:name=".ListeMagasins"
+      android:label="@string/title_activity_liste_magasins"
+      android:theme="@style/Theme.TD1.NoActionBar"
+      android:parentActivityName=".MainActivity"/>
+
+    <activity
+      android:name=".ListeProduit"
+      android:label="@string/title_activity_liste_produits"
+      android:theme="@style/Theme.TD1.NoActionBar"
+      android:parentActivityName=".MainActivity"/>
   </application>
 
 </manifest>
