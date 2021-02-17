@@ -19,8 +19,6 @@ public class AjoutMagasin extends AppCompatActivity {
     setContentView(R.layout.activity_ajout_magasin);
     Toolbar toolbar = findViewById(R.id.toolbar2);
     setSupportActionBar(toolbar);
-    getSupportActionBar().setDisplayHomeAsUpEnabled(true); // Boutton de retour vers l'activité parente
-
     EditText champ = (EditText) findViewById(R.id.editMagasin);
     TextView text = (TextView) findViewById(R.id.textView);
     Button send = (Button) findViewById(R.id.send);

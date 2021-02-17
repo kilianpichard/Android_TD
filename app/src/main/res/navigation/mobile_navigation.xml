@@ -3,23 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@id/homeFragment">
 
-    <fragment
-        android:id="@+id/nav_home"
-        android:name="com.example.td1.ui.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+  <fragment
+    android:id="@+id/nav_magasins"
+    android:name="com.example.td1.ListeMagasins"
+    tools:layout="@layout/activity_liste_magasins" />
 
-    <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.td1.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+  <fragment
+    android:id="@+id/ListeMagasin"
+    android:name="com.example.td1.ListeProduit"
+    android:label="@string/menu_gallery"
+    tools:layout="@layout/activity_liste_produits" />
+  <fragment
+    android:id="@+id/homeFragment"
+    android:name="com.example.td1.Home"
+    android:label="fragment_home"
+    tools:layout="@layout/home_fragment" />
 
-    <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.td1.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
 </navigation>

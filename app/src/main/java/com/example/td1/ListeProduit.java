@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -15,21 +16,17 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
 
 import java.util.Arrays;
 import java.util.List;
 
-public class ListeProduit extends AppCompatActivity {
+public class ListeProduit extends Fragment {
 
-  @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
+  public View onCreateView(LayoutInflater inflater, ViewGroup container,
 
-    setContentView(R.layout.activity_liste_produits);
-    Toolbar toolbar = findViewById(R.id.toolbar);
-    setSupportActionBar(toolbar);
-    getSupportActionBar().setDisplayHomeAsUpEnabled(true); // Boutton de retour vers l'activité parente
-
+                           Bundle savedInstanceState) {
+    View view = inflater.inflate(R.layout.activity_liste_produits, container, false);
     final List<Produit> produits = Arrays.asList(
       new Produit("Boissons", "Pack 6 Bière", 12.99, 0, "Rayon Alcool"),
       new Produit("Condiments", "Huile d'olive 50cl", 5.79, 10, "Rayon Huile"),
@@ -37,7 +34,7 @@ public class ListeProduit extends AppCompatActivity {
       new Produit("Pommes", "Pommes Golden (1kg)", 2.38, 0, "Rayon Fruits & Légumes")
     );
     final boolean[] selection = new boolean[produits.size()];
-    ListView lv = (ListView) findViewById(R.id.listProduit);
+    ListView lv = (ListView) view.findViewById(R.id.listProduit);
 
     lv.setOnItemClickListener(
       new AdapterView.OnItemClickListener() {
@@ -52,7 +49,7 @@ public class ListeProduit extends AppCompatActivity {
         }
       }
     );
-    lv.setAdapter(new ArrayAdapter<Produit>(this, R.layout.produit_item, R.id.productName, produits) {
+    lv.setAdapter(new ArrayAdapter<Produit>(getActivity(), R.layout.produit_item, R.id.productName, produits) {
       @SuppressLint("DefaultLocale")
       @NonNull
       @Override
@@ -83,5 +80,6 @@ public class ListeProduit extends AppCompatActivity {
         return v;
       }
     });
+    return view;
   }
 }
