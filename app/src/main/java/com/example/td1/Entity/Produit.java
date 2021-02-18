@@ -4,9 +4,11 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity
-public class Magasin {
+public class Produit {
   @PrimaryKey
   private int _id;
 
+  private int categorie;
   private String nom;
+  private String code;
 }

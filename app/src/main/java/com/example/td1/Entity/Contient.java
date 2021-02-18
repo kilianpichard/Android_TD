@@ -4,9 +4,13 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity
-public class Magasin {
+public class Contient {
+
   @PrimaryKey
   private int _id;
 
-  private String nom;
+  private int id_produit;
+  private int id_liste;
+  private float quantite;
+  private float achete;
 }

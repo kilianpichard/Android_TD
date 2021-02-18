@@ -4,9 +4,10 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity
-public class Magasin {
+public class Liste {
+
   @PrimaryKey
   private int _id;
 
-  private String nom;
+  private int id_magasin;
 }
