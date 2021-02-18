@@ -14,8 +14,8 @@ public interface MagasinDAO {
   public void insertMagasin(Magasin m);
 
   @Update
-  public Magasin updateMagasin(Magasin m);
+  public Magasin updateMagasin(Magasin m,int id);
 
   @Delete
-  public void deleteMagasin(Magasin m);
+  public void deleteMagasin(int id);
 }
