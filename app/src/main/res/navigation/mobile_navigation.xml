@@ -3,22 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/nav_magasins">
 
   <fragment
     android:id="@+id/nav_magasins"
     android:name="com.example.td1.ListeMagasins"
+    android:label="@string/menu_1"
     tools:layout="@layout/activity_liste_magasins" />
 
   <fragment
     android:id="@+id/ListeMagasin"
     android:name="com.example.td1.ListeProduit"
-    android:label="@string/menu_gallery"
+    android:label="@string/menu_2"
     tools:layout="@layout/activity_liste_produits" />
-  <fragment
-    android:id="@+id/homeFragment"
-    android:name="com.example.td1.Home"
-    android:label="fragment_home"
-    tools:layout="@layout/home_fragment" />
 
 </navigation>
