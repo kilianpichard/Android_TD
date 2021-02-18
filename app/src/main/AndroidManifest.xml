@@ -19,7 +19,8 @@
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
-    <activity android:name=".AjoutMagasin"
+    <activity
+      android:name=".AjoutMagasin"
       android:theme="@style/Theme.TD1.NoActionBar"></activity>
   </application>
 

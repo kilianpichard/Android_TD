@@ -6,12 +6,9 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -28,11 +25,11 @@ public class ListeMagasins extends Fragment {
       startActivityForResult(intent, 1);
       onActivityResult(2, 1, intent);
     });
-    FloatingActionButton add =  view.findViewById(R.id.add);
+    FloatingActionButton add = view.findViewById(R.id.add);
     add.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
-        intent.putExtra("nomMagasin","");
+        intent.putExtra("nomMagasin", "");
         intent.putExtra("text", "Ajouter un Magasin");
         startActivityForResult(intent, 1);
         onActivityResult(2, 1, intent);
