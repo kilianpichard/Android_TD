@@ -3,10 +3,9 @@ package com.example.td1.Entity;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-@Entity
+@Entity(primaryKeys = {"_id","id_produit","id_magasin"})
 public class Vend {
 
-  @PrimaryKey
   private int _id;
   private int id_produit;
   private int id_magasin;
