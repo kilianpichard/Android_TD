@@ -19,22 +19,8 @@
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
-    <activity
-      android:name=".AjoutMagasin"
-      android:label="@string/title_activity_ajout_magasins"
-      android:parentActivityName=".ListeMagasins"
-      android:theme="@style/Theme.TD1.NoActionBar" />
-    <activity
-      android:name=".ListeMagasins"
-      android:label="@string/title_activity_liste_magasins"
-      android:theme="@style/Theme.TD1.NoActionBar"
-      android:parentActivityName=".MainActivity"/>
-
-    <activity
-      android:name=".ListeProduit"
-      android:label="@string/title_activity_liste_produits"
-      android:theme="@style/Theme.TD1.NoActionBar"
-      android:parentActivityName=".MainActivity"/>
+    <activity android:name=".AjoutMagasin"
+      android:theme="@style/Theme.TD1.NoActionBar"></activity>
   </application>
 
 </manifest>
