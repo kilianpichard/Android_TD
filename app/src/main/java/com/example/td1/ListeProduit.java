@@ -32,7 +32,7 @@ public class ListeProduit extends Fragment {
       new Produit("Condiments", "Huile d'olive 50cl", 5.79, 10, "Rayon Huile"),
       new Produit("Soins dentaire", "Dentifrice Colgate", 3.59, 20, "Rayon Hygiène"),
       new Produit("Pommes", "Pommes Golden (1kg)", 2.38, 0, "Rayon Fruits & Légumes")
-    );
+    ); //LJ: note pour plus tard : la liste est en lecture seule... impossible d'y ajouter de nouveaux éléments
     final boolean[] selection = new boolean[produits.size()];
     ListView lv = (ListView) view.findViewById(R.id.listProduit);
 
@@ -62,7 +62,7 @@ public class ListeProduit extends Fragment {
         TextView productReduc = v.findViewById(R.id.productReduc);
         TextView productPlace = v.findViewById(R.id.productPlace);
         TextView productPricePromo = v.findViewById(R.id.productPriceProm);
-        productName.setText(produits.get(position).nom);
+        productName.setText(produits.get(position).nom); //LJ: Vous pouvez utiliser une variable locale au lieu de faire 8 get identiques sur la liste !
         productCat.setText(produits.get(position).categorie);
         productPrice.setText(String.format("%.2f", produits.get(position).prix) + "€");
         productPricePromo.setText(String.format("%.2f", produits.get(position).prix * (1 - produits.get(position).promotion * 0.01)) + "€");
@@ -77,6 +77,8 @@ public class ListeProduit extends Fragment {
           productPrice.setPaintFlags(productPrice.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
           productPrice.setTextColor(Color.RED);
         }
+
+        //LJ: Et si les éléments sont déjà selectionnés ?
         return v;
       }
     });

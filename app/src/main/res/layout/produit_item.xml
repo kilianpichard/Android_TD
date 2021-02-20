@@ -4,7 +4,10 @@
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent">
+<!--LJ avec une hauteur de  layout en match-parent, vous risquez d'avoir une page par ligne ! -->
 
+  <!--LJ pensez à mettre des tools:text dans vos layouts, pour qu'on aie une idée du look final dans l'IDE
+   !  Toutes les données "tools:" ne sont valides que dans l'IDE et invisible "en vrai" -->
   <TextView
     android:id="@+id/productName"
     android:layout_width="240dp"
@@ -13,6 +16,7 @@
     android:layout_marginTop="16dp"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
+    tools:text="exemple de tools:text"
     tools:ignore="MissingConstraints" />
 
   <TextView
