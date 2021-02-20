@@ -4,7 +4,7 @@
   xmlns:tools="http://schemas.android.com/tools"
   android:id="@+id/nav_graph"
   app:startDestination="@id/FirstFragment">
-
+<!--LJ: Quel est ce graphe avec des erreurs ? -->
   <fragment
     android:id="@+id/FirstFragment"
     android:name="com.example.td1.FirstFragment"

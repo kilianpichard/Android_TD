@@ -16,5 +16,6 @@
     android:name="com.example.td1.ListeProduit"
     android:label="@string/menu_2"
     tools:layout="@layout/activity_liste_produits" />
+<!--LJ: Pas d'AjoutMagasin ? -->
 
 </navigation>
