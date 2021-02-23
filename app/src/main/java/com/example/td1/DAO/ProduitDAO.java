@@ -14,8 +14,8 @@ public interface ProduitDAO {
   public void insertProduit(Produit p);
 
   @Update
-  public Produit updateProduit(Produit p,int id);
+  public abstract Produit updateProduit(Produit p,int id);
 
   @Delete
-  public void deleteProduit(int id);
+  public abstract void deleteProduit(int id);
 }

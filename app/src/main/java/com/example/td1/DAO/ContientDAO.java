@@ -14,8 +14,8 @@ public interface ContientDAO {
   public void insertContient(Contient c);
 
   @Update
-  public Contient updateContient(Contient c, int id);
+  public abstract Contient updateContient(Contient c, int id);
 
   @Delete
-  public void deleteContient(int id);
+  public  abstract void deleteContient(int id);
 }

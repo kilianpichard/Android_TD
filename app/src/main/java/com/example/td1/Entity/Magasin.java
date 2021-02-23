@@ -9,4 +9,20 @@ public class Magasin {
   private int _id;
 
   private String nom;
+
+  public int get_id() {
+    return _id;
+  }
+
+  public void set_id(int _id) {
+    this._id = _id;
+  }
+
+  public String getNom() {
+    return nom;
+  }
+
+  public void setNom(String nom) {
+    this.nom = nom;
+  }
 }

@@ -14,8 +14,8 @@ public interface VendDAO {
   public void insertVend(Vend v);
 
   @Update
-  public Vend updateVend(Vend v, int id);
+  public abstract Vend updateVend(Vend v, int id);
 
   @Delete
-  public void deleteVend(int id);
+  public abstract void deleteVend(int id);
 }

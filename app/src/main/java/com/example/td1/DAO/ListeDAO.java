@@ -14,8 +14,8 @@ public interface ListeDAO {
   public void insertListe(Liste l);
 
   @Update
-  public Liste updateListe(Liste l, int id);
+  public abstract Liste updateListe(Liste l, int id);
 
   @Delete
-  public void deleteListe(int id);
+  public  abstract void deleteListe(int id);
 }
