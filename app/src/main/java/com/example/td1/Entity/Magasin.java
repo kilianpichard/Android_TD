@@ -11,7 +11,7 @@ public class Magasin {
   private String nom;
 
   public int get_id() {
-    return _id;
+    return this._id;
   }
 
   public void set_id(int _id) {
@@ -19,7 +19,7 @@ public class Magasin {
   }
 
   public String getNom() {
-    return nom;
+    return this.nom;
   }
 
   public void setNom(String nom) {
