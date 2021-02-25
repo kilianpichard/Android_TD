@@ -2,11 +2,11 @@ package com.example.td1;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
@@ -19,6 +19,8 @@ public class ListeMagasins extends Fragment {
     View view = inflater.inflate(R.layout.activity_liste_magasins, container, false);
     final Intent intent = new Intent(getActivity(), AjoutMagasin.class);
     final ListView listeMagasins = (ListView) view.findViewById(R.id.listMagasins);
+
+
     listeMagasins.setOnItemClickListener((parent, view1, position, id) -> {
       intent.putExtra("nomMagasin", listeMagasins.getItemAtPosition(position).toString());
       intent.putExtra("text", "Changer " + listeMagasins.getItemAtPosition(position).toString() + " en :");
@@ -49,7 +51,6 @@ public class ListeMagasins extends Fragment {
         } else {
           toast = Toast.makeText(getActivity(), "Vous avez modifier :  " + nomMagasin, Toast.LENGTH_SHORT);
         }
-        toast.setGravity(Gravity.CENTER, 0, -100);
         toast.show();
       }
     } catch (NullPointerException e) {

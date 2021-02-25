@@ -13,10 +13,9 @@ public abstract class Database extends RoomDatabase {
 
  abstract public MagasinDAO magasinDAO();
 
-  public void create(){
-    /**Room.databaseBuilder(appContext, Database.class, "Sample.db")
-      .createFromAsset("database/myapp.db")
+  public static Database db(Context context){
+    return Room.databaseBuilder(context, Database.class, "Listes.db")
       .fallbackToDestructiveMigration()
-      .build();**/
+      .build();
   }
 }

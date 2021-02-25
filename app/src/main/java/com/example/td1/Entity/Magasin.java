@@ -5,7 +5,8 @@ import androidx.room.PrimaryKey;
 
 @Entity
 public class Magasin {
-  @PrimaryKey
+
+  @PrimaryKey(autoGenerate = true)
   private int _id;
 
   private String nom;
@@ -14,15 +15,13 @@ public class Magasin {
     return this._id;
   }
 
-  public void set_id(int _id) {
-    this._id = _id;
-  }
+  public void set_id(int _id){ this._id = _id; }
 
   public String getNom() {
     return this.nom;
   }
 
-  public void setNom(String nom) {
+  public Magasin(String nom) {
     this.nom = nom;
   }
 }
