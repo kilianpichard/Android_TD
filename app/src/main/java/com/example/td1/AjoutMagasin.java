@@ -49,7 +49,7 @@ public class AjoutMagasin extends AppCompatActivity {
         if (champ.getText().toString().length() != 0) {
           Thread t = new Thread(){
             public void run(){
-              db.magasinDAO().insertMagasin(new Magasin(champ.getText().toString()));
+              db.magasinDAO().insertMagasin(new Magasin(champ.getText().toString())); //LJ: ok pour ajout
             }
           };
           t.start();

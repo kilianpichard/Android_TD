@@ -19,7 +19,7 @@ public class ListeMagasins extends Fragment {
     View view = inflater.inflate(R.layout.activity_liste_magasins, container, false);
     final Intent intent = new Intent(getActivity(), AjoutMagasin.class);
     final ListView listeMagasins = (ListView) view.findViewById(R.id.listMagasins);
-
+//LJ: Vous ne lisez pas la base de données ???
 
     listeMagasins.setOnItemClickListener((parent, view1, position, id) -> {
       intent.putExtra("nomMagasin", listeMagasins.getItemAtPosition(position).toString());
