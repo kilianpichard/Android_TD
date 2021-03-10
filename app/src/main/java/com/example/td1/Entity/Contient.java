@@ -6,11 +6,11 @@ import androidx.room.PrimaryKey;
 @Entity
 public class Contient {
 
-  @PrimaryKey
-  private int _id;
+    @PrimaryKey
+    private int _id;
 
-  private int id_produit;
-  private int id_liste;
-  private float quantite;
-  private float achete;
+    private int id_produit;
+    private int id_liste;
+    private float quantite;
+    private float achete;
 }

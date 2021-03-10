@@ -6,8 +6,8 @@ import androidx.room.PrimaryKey;
 @Entity
 public class Liste {
 
-  @PrimaryKey
-  private int _id;
+    @PrimaryKey
+    private int _id;
 
-  private int id_magasin;
+    private int id_magasin;
 }

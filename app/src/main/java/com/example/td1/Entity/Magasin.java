@@ -6,22 +6,24 @@ import androidx.room.PrimaryKey;
 @Entity
 public class Magasin {
 
-  @PrimaryKey(autoGenerate = true)
-  private int _id;
+    @PrimaryKey(autoGenerate = true)
+    private int _id;
 
-  private String nom;
+    private String nom;
 
-  public int get_id() {
-    return this._id;
-  }
+    public Magasin(String nom) {
+        this.nom = nom;
+    }
 
-  public void set_id(int _id){ this._id = _id; }
+    public int get_id() {
+        return this._id;
+    }
 
-  public String getNom() {
-    return this.nom;
-  }
+    public void set_id(int _id) {
+        this._id = _id;
+    }
 
-  public Magasin(String nom) {
-    this.nom = nom;
-  }
+    public String getNom() {
+        return this.nom;
+    }
 }

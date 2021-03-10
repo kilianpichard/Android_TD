@@ -10,12 +10,12 @@ import com.example.td1.Entity.Vend;
 @Dao
 public interface VendDAO {
 
-  @Insert
-  public void insertVend(Vend v);
+    @Insert
+    public void insertVend(Vend v);
 
-  @Update
-  public abstract void updateVend(Vend v);
+    @Update
+    public abstract void updateVend(Vend v);
 
-  @Delete
-  public abstract void deleteVend(Vend v);
+    @Delete
+    public abstract void deleteVend(Vend v);
 }

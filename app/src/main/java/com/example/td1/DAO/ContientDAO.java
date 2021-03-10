@@ -10,12 +10,12 @@ import com.example.td1.Entity.Contient;
 @Dao
 public interface ContientDAO {
 
-  @Insert
-  public void insertContient(Contient c);
+    @Insert
+    public void insertContient(Contient c);
 
-  @Update
-  public abstract void updateContient(Contient c);
+    @Update
+    public abstract void updateContient(Contient c);
 
-  @Delete
-  public  abstract void deleteContient(Contient c);
+    @Delete
+    public abstract void deleteContient(Contient c);
 }

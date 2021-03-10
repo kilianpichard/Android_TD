@@ -10,12 +10,12 @@ import com.example.td1.Entity.Liste;
 @Dao
 public interface ListeDAO {
 
-  @Insert
-  public void insertListe(Liste l);
+    @Insert
+    public void insertListe(Liste l);
 
-  @Update
-  public abstract void updateListe(Liste l);
+    @Update
+    public abstract void updateListe(Liste l);
 
-  @Delete
-  public  abstract void deleteListe(Liste l);
+    @Delete
+    public abstract void deleteListe(Liste l);
 }
