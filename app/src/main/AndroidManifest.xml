@@ -23,6 +23,9 @@
         <activity
             android:name=".AjoutMagasin"
             android:theme="@style/Theme.TD1.NoActionBar" />
+        <activity
+            android:name=".AjoutProduit"
+            android:theme="@style/Theme.TD1.NoActionBar" />
     </application>
     <uses-permission android:name="android.permission.INTERNET" />
 
