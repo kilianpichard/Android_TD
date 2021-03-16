@@ -63,7 +63,7 @@ public class MainActivity2 extends AppCompatActivity {
                         JSONArray jsonObj = new JSONArray(s);
                         Produit ps[] = new Produit[jsonObj.length()];
                         for (int i = 0; i < jsonObj.length(); i++) {
-                            Produit p = new Produit(jsonObj.getJSONObject(i).getString("categorie"), jsonObj.getJSONObject(i).getString("nom"));
+                            Produit p = new Produit(jsonObj.getJSONObject(i).getString("categorie"), jsonObj.getJSONObject(i).getString("nom"), jsonObj.getJSONObject(i).getString("_id"), jsonObj.getJSONObject(i).getString("code"));
                             ps[i] = p;
                         }
                         final List<Produit> produits = Arrays.asList(ps);

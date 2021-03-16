@@ -66,7 +66,7 @@ public class ListeProduit extends Fragment {
                         JSONArray jsonObj = new JSONArray(s);
                         Produit ps[] = new Produit[jsonObj.length()];
                         for (int i = 0; i < jsonObj.length(); i++) {
-                            Produit p = new Produit(jsonObj.getJSONObject(i).getString("categorie"), jsonObj.getJSONObject(i).getString("nom"));
+                            Produit p = new Produit(jsonObj.getJSONObject(i).getString("categorie"), jsonObj.getJSONObject(i).getString("nom"), jsonObj.getJSONObject(i).getString("_id"), jsonObj.getJSONObject(i).getString("code"));
                             ps[i] = p;
                         }
                         produits = Arrays.asList(ps);
@@ -78,12 +78,14 @@ public class ListeProduit extends Fragment {
                                 new AdapterView.OnItemClickListener() {
                                     @Override
                                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                                        if (selection[position]) {
-                                            view.setBackgroundColor(Color.WHITE);
-                                        } else {
-                                            view.setBackgroundColor(Color.LTGRAY);
-                                        }
-                                        selection[position] = !selection[position];
+
+
+                                            Intent edit = new Intent(getActivity(), EditProduct.class);
+                                            edit.putExtra("id",produits.get(position).id);
+                                            edit.putExtra("productName",produits.get(position).nom);
+                                        edit.putExtra("productCode",produits.get(position).code);
+                                            startActivityForResult(edit, 1);
+
                                     }
                                 }
                         );

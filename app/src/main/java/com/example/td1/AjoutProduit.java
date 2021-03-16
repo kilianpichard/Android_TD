@@ -56,7 +56,7 @@ public class AjoutProduit extends AppCompatActivity {
                 protected String doInBackground(Void... voids) {
                     try {
                         String productName = name.getText().toString();
-
+                        String productQte = qte.getText().toString();
 
                         HttpURLConnection conn = null;
                         URL site = new
@@ -67,7 +67,7 @@ public class AjoutProduit extends AppCompatActivity {
                         conn.setRequestProperty("Content-Type", "application/json; utf-8");
                         OutputStream fluxOut = conn.getOutputStream();
                         PrintWriter writer = new PrintWriter(fluxOut, true);
-                        writer.println("{\"_id\":1,\"categorie\":null,\"nom\":\""+ productName+"\",\"code\":1563}");
+                        writer.println("{\"_id\":1,\"categorie\":null,\"nom\":\""+ productName+"\",\"code\":"+ productQte +"}");
                         System.out.println(conn.getResponseMessage().toString());
                         fluxOut.close();
                         conn.disconnect();
