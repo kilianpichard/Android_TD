@@ -38,7 +38,7 @@ public class ListeProduit extends Fragment {
         try {
             URL url = new URL("https://dev-restandroid.users.info.unicaen.fr/iut/produits");
 
-            new AsyncTask<Void, Void, String>() {
+            new AsyncTask<Void, Void, String>() { //LJ: cette asyncTask serait mieux dans le ViewModel du fragment....
                 @SuppressLint("StaticFieldLeak")
                 @Override
                 protected String doInBackground(Void... voids) {
@@ -48,6 +48,7 @@ public class ListeProduit extends Fragment {
                     try {
                         connection = (HttpURLConnection) url.openConnection();
                         connection.connect();
+                        //LJ: pas de test de succès ?
                         BufferedReader buff = new BufferedReader(new InputStreamReader(connection.getInputStream()));
                         while ((ligne = buff.readLine()) != null)
                             res.append(ligne);
@@ -61,13 +62,13 @@ public class ListeProduit extends Fragment {
                 }
 
                 @Override
-                protected void onPostExecute(String s) {
+                protected void onPostExecute(String s) {//LJ: ok
                     try {
                         JSONArray jsonObj = new JSONArray(s);
                         Produit ps[] = new Produit[jsonObj.length()];
                         for (int i = 0; i < jsonObj.length(); i++) {
                             Produit p = new Produit(jsonObj.getJSONObject(i).getString("categorie"), jsonObj.getJSONObject(i).getString("nom"), jsonObj.getJSONObject(i).getString("_id"), jsonObj.getJSONObject(i).getString("code"));
-                            ps[i] = p;
+                            ps[i] = p; //LJ: ok traduction JSON->Pojo
                         }
                         produits = Arrays.asList(ps);
 
@@ -89,7 +90,7 @@ public class ListeProduit extends Fragment {
                                     }
                                 }
                         );
-                        lv.setAdapter(new ArrayAdapter<Produit>(getActivity(), R.layout.produit_item, R.id.productName, produits) {
+                        lv.setAdapter(new ArrayAdapter<Produit>(getActivity(), R.layout.produit_item, R.id.productName, produits) { //LJ: ok afficahge
                             @SuppressLint("DefaultLocale")
                             @NonNull
                             @Override

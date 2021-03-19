@@ -20,7 +20,7 @@ import java.net.URL;
 import java.util.Arrays;
 import java.util.List;
 
-public class MainActivity2 extends AppCompatActivity {
+public class MainActivity2 extends AppCompatActivity { //LJ: Pas dans le manifeste ?
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +34,7 @@ public class MainActivity2 extends AppCompatActivity {
 
     public void afficherPage(View view) {
         try {
-            URL url = new URL("https://dev-restandroid.users.info.unicaen.fr/iut/produits");
+            URL url = new URL("https://dev-restandroid.users.info.unicaen.fr/iut/produits"); //LJ: Ce n'est pas exactement une 'page' web....
 
             new AsyncTask<Void, Void, String>() {
                 @SuppressLint("StaticFieldLeak")
@@ -46,21 +46,22 @@ public class MainActivity2 extends AppCompatActivity {
                     try {
                         connection = (HttpURLConnection) url.openConnection();
                         connection.connect();
+                        //LJ: pas de test de succès ?
                         BufferedReader buff = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-                        while ((ligne = buff.readLine()) != null)
+                        while ((ligne = buff.readLine()) != null) //LJ: ok
                             res.append(ligne);
                         buff.close();
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
-                    return res.toString();
+                    return res.toString(); //LJ: ok
                 }
 
                 @Override
                 protected void onPostExecute(String s) {
                     try {
                         TextView test = findViewById(R.id.textView4);
-                        JSONArray jsonObj = new JSONArray(s);
+                        JSONArray jsonObj = new JSONArray(s); //LJ: certes, mais ce n'était pas le but de la question !
                         Produit ps[] = new Produit[jsonObj.length()];
                         for (int i = 0; i < jsonObj.length(); i++) {
                             Produit p = new Produit(jsonObj.getJSONObject(i).getString("categorie"), jsonObj.getJSONObject(i).getString("nom"), jsonObj.getJSONObject(i).getString("_id"), jsonObj.getJSONObject(i).getString("code"));
@@ -72,7 +73,7 @@ public class MainActivity2 extends AppCompatActivity {
                         e.printStackTrace();
                     }
                     WebView t = findViewById(R.id.web);
-                    t.loadData(s, "text/html; charset=UTF-8", null);
+                    t.loadData(s, "text/html; charset=UTF-8", null); //LJ: Sans objet pour une page JSON....
 
                 }
 

@@ -62,13 +62,13 @@ public class AjoutProduit extends AppCompatActivity {
                         URL site = new
                                 URL("https://dev-restandroid.users.info.unicaen.fr/iut/produits");
                         conn = (HttpURLConnection) site.openConnection();
-                        conn.setRequestMethod("POST");
+                        conn.setRequestMethod("POST"); //LJ: ok
                         conn.setDoOutput(true);
-                        conn.setRequestProperty("Content-Type", "application/json; utf-8");
+                        conn.setRequestProperty("Content-Type", "application/json; utf-8"); //LJ: ok
                         OutputStream fluxOut = conn.getOutputStream();
                         PrintWriter writer = new PrintWriter(fluxOut, true);
-                        writer.println("{\"_id\":1,\"categorie\":null,\"nom\":\""+ productName+"\",\"code\":"+ productQte +"}");
-                        System.out.println(conn.getResponseMessage().toString());
+                        writer.println("{\"_id\":1,\"categorie\":null,\"nom\":\""+ productName+"\",\"code\":"+ productQte +"}"); //LJ: ok
+                        System.out.println(conn.getResponseMessage().toString());//LJ: ok mais insuffisant. Il faut répupérer la réponse ! (id du produit ajouté...)
                         fluxOut.close();
                         conn.disconnect();
                     } catch (IOException e) {
@@ -81,7 +81,7 @@ public class AjoutProduit extends AppCompatActivity {
 
             final Intent retour = new Intent(AjoutProduit.this, ListeProduit.class);
             setResult(MainActivity.RESULT_OK, retour);
-            finish();
+            finish(); //LJ: attention, n'attend pas la fin de la requête pour retourner à la liste...
         }
 
 
