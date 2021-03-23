@@ -9,7 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TD1">
-        <activity android:name=".AjoutMagasin"></activity>
+        <service
+            android:name=".MyIntentService"
+            android:exported="false"></service>
+
+        <activity
+            android:name=".MainActivity2"
+            android:label="@string/title_activity_main2"
+            android:theme="@style/Theme.TD1.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".AjoutMagasin" />
         <activity
             android:name=".ListeMagasins"
             android:label="@string/title_activity_liste_magasins"
