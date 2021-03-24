@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="modules">
+        <item>M4102C_2</item>
+        <item>M4103C_2</item>
+        <item>M4104C_2</item>
+    </string-array>
+</resources>
