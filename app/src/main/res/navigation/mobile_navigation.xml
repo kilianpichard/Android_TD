@@ -20,6 +20,6 @@
     <fragment
         android:id="@+id/nav_slideshow"
         android:name="com.example.td1.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_liste"
+        android:label="@string/menu_new"
         tools:layout="@layout/fragment_slideshow" />
 </navigation>
