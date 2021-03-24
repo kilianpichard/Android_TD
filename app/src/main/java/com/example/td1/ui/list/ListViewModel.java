@@ -1,16 +1,15 @@
-package com.example.td1.ui.gallery;
+package com.example.td1.ui.list;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class GalleryViewModel extends ViewModel {
+public class ListViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public GalleryViewModel() {
+    public ListViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is gallery fragment");
     }
 
     public LiveData<String> getText() {

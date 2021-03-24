@@ -13,9 +13,9 @@
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="com.example.td1.ui.gallery.GalleryFragment"
+        android:name="com.example.td1.ui.list.ListFragment"
         android:label="@string/menu_liste"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_list" />
 
     <fragment
         android:id="@+id/nav_slideshow"
