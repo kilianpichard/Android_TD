@@ -15,9 +15,14 @@ public class ListFragment extends Fragment {
 
     private ListViewModel listViewModel;
 
-    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        listViewModel = new ViewModelProvider(this).get(ListViewModel.class);
+<<<<<<< Updated upstream:app/src/main/java/com/example/td1/ui/list/ListFragment.java
         View root = inflater.inflate(R.layout.fragment_list, container, false);
+=======
+        galleryViewModel =
+                new ViewModelProvider(this).get(GalleryViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_gallery, container, false);
+
+>>>>>>> Stashed changes:app/src/main/java/com/example/td1/ui/gallery/GalleryFragment.java
         return root;
     }
 
