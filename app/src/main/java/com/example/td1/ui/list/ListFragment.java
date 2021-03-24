@@ -20,16 +20,9 @@ public class ListFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-<<<<<<< Updated upstream:app/src/main/java/com/example/td1/ui/list/ListFragment.java
         listViewModel =
                 new ViewModelProvider(this).get(ListViewModel.class);
         View root = inflater.inflate(R.layout.fragment_list, container, false);
-=======
-        galleryViewModel =
-                new ViewModelProvider(this).get(GalleryViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_gallery, container, false);
-
->>>>>>> Stashed changes:app/src/main/java/com/example/td1/ui/gallery/GalleryFragment.java
         return root;
     }
 }
